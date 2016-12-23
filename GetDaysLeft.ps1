@@ -34,6 +34,8 @@ $datestring = $expirationresult.Substring($expirationtextsearch.Length)
 if (!$dateformattstring){
     $expiredate = Get-Date $datestring
 }else{
+    $datestring = $datestring.substring(0,$dateformattstring.Length)
+    write-host $datestring
     $expiredate = [DateTime]::ParseExact($datestring, $dateformattstring, $null)
 }
 
