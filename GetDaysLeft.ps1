@@ -1,4 +1,4 @@
-#whois.exe from micrsoft must be in specified in script or set as a avariable
+#whois.exe from micrsoft must be in specified in script or set as a variable
 #example .\GetDaysLeft.ps1 rg.bm "Registrar Registration Expiration Date: " whois.asaplatform.info
 #example .\GetDaysLeft.ps1 google.com "Registrar Registration Expiration Date: "
 #example .\GetDaysLeft.ps1 bbc.co.uk "        Expiry date:" 
