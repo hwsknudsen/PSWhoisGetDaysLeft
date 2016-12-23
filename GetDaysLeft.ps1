@@ -12,8 +12,8 @@ Param(
   [string]$domain,
   [Parameter(Mandatory=$true)]
   [string]$expirationtextsearch,
+  [string]$whoisserveroveride,  
   [string]$dateformattstring,
-  [string]$whoisserveroveride,
   [string]$whoislocation
 )
 
