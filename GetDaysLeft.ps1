@@ -38,7 +38,23 @@ if (!$dateformattstring){
     $expiredate = [DateTime]::ParseExact($datestring, $dateformattstring, $null)
 }
 
+
+
 $daystoexpire = ($expiredate - (Get-Date)).Days
+
+if ($daystoexpire -gt 3650){
+    $x=[string]$daystoexpire+":The domain registration expires in "+$daystoexpire+" days. This is invalid as it exceeds ICAAN 10 years"
+    write-host $x
+    exit 4 
+}
+
+if ($daystoexpire -lt 0){
+    $x=[string]$daystoexpire+":The domain registration expires in "+$daystoexpire+" days. This is invalid as it is negative "
+    write-host $x
+    exit 4 
+}
+
+
 
 $x=[string]$daystoexpire+":The domain registration expires in "+$daystoexpire+" days."
 write-host $x
